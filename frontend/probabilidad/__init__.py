@@ -1,0 +1,1 @@
+from .analisis_estadistico_view import render as analisis_estadistico_view
