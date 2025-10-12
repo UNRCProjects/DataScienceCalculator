@@ -26,6 +26,7 @@ def render():
     """)
     st.markdown("""
     - 🧮 Áritmetica  
+    - 📊 Probabilidad
     """)
     
     # Nota final

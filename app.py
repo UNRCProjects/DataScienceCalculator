@@ -64,6 +64,10 @@ elif categoria == "Aritmética" and subopcion == "Coprimos":
     coprimos_view.render()
 elif categoria == "Probabilidad" and subopcion == "AnalisisEstadistico":
     analisis_estadistico_view()
+elif categoria == "Probabilidad" and subopcion == "Carga de Datos":
+    carga_datos_view.render()
+elif categoria == "Probabilidad" and subopcion == "Distribuciones":
+    distribuciones_view.render()
 elif categoria == "Autores":
     autores_view.render()
 
