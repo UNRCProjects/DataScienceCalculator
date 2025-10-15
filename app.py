@@ -1,5 +1,5 @@
 import streamlit as st
-from frontend.aritmetica import mcd_view, mcm_view, primos_view, coprimos_view
+from frontend.combinatoria import factorial_view, permutaciones_view, combinaciones_view, probabilidad_basica_view, distribucion_binomial_view
 from frontend import home_view
 from frontend import autores_view
 
@@ -28,19 +28,23 @@ with st.sidebar.expander("🏠 Home", expanded=False):
     if st.button("Autores", key="autores_btn"):
         st.session_state['categoria'] = "Autores"
 
-with st.sidebar.expander("🧮 Aritmética"):
-    if st.button("Máximo Común Divisor (MCD)", key="mcd_btn"):
-        st.session_state['categoria'] = "Aritmética"
-        st.session_state['subopcion'] = "MCD"
-    if st.button("Mínimo Común Multiplo (MCM)", key="mcm_btn"):
-        st.session_state['categoria'] = "Aritmética"
-        st.session_state['subopcion'] = "MCM"
-    if st.button("Número primo", key="primos_btn"):
-        st.session_state['categoria'] = "Aritmética"
-        st.session_state['subopcion'] = "Primos"
-    if st.button("Números coprimos", key="coprimos_btn"):
-        st.session_state['categoria'] = "Aritmética"
-        st.session_state['subopcion'] = "Coprimos"
+with st.sidebar.expander("📊 Combinatoria y Probabilidad"):
+    if st.button("Factorial", key="factorial_btn"):
+        st.session_state['categoria'] = "Combinatoria"
+        st.session_state['subopcion'] = "Factorial"
+    if st.button("Permutaciones", key="permutaciones_btn"):
+        st.session_state['categoria'] = "Combinatoria"
+        st.session_state['subopcion'] = "Permutaciones"
+    if st.button("Combinaciones", key="combinaciones_btn"):
+        st.session_state['categoria'] = "Combinatoria"
+        st.session_state['subopcion'] = "Combinaciones"
+    if st.button("Probabilidad Básica", key="probabilidad_basica_btn"):
+        st.session_state['categoria'] = "Combinatoria"
+        st.session_state['subopcion'] = "Probabilidad Básica"
+    if st.button("Distribución Binomial", key="distribucion_binomial_btn"):
+        st.session_state['categoria'] = "Combinatoria"
+        st.session_state['subopcion'] = "Distribución Binomial"
+
 
 # Ruteo según selección
 categoria = st.session_state['categoria']
@@ -48,14 +52,16 @@ subopcion = st.session_state['subopcion']
 
 if categoria == "Home":
     home_view.render()
-elif categoria == "Aritmética" and subopcion == "MCD":
-    mcd_view.render()
-elif categoria == "Aritmética" and subopcion == "MCM":
-    mcm_view.render()
-elif categoria == "Aritmética" and subopcion == "Primos":
-    primos_view.render()
-elif categoria == "Aritmética" and subopcion == "Coprimos":
-    coprimos_view.render()
+elif categoria == "Combinatoria" and subopcion == "Factorial":
+    factorial_view.render()
+elif categoria == "Combinatoria" and subopcion == "Permutaciones":
+    permutaciones_view.render()
+elif categoria == "Combinatoria" and subopcion == "Combinaciones":
+    combinaciones_view.render()
+elif categoria == "Combinatoria" and subopcion == "Probabilidad Básica":
+    probabilidad_basica_view.render()
+elif categoria == "Combinatoria" and subopcion == "Distribución Binomial":
+    distribucion_binomial_view.render()
 elif categoria == "Autores":
     autores_view.render()
 
