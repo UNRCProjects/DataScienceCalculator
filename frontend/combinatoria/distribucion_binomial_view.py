@@ -155,8 +155,8 @@ def render():
         """)
         
         # Calcular estadísticas si hay parámetros válidos
-        try:
-            if n > 0 and 0 <= p <= 1:
+        if n > 0 and 0 <= p <= 1:
+            try:
                 media = n * p
                 varianza = n * p * (1 - p)
                 desviacion = np.sqrt(varianza)
@@ -165,8 +165,8 @@ def render():
                 st.text(f"• Media: {media:.2f}")
                 st.text(f"• Varianza: {varianza:.2f}")
                 st.text(f"• Desviación estándar: {desviacion:.2f}")
-        except Exception:
-            pass
+            except (ValueError, OverflowError) as e:
+                st.warning(f"No se pudieron calcular las estadísticas: {e}")
         
         # Aplicaciones
         st.markdown("""

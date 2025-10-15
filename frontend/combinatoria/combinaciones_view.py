@@ -1,5 +1,5 @@
 import streamlit as st
-from backend.combinatoria_y_probabilidad import combinacion, coeficiente_binomial
+from backend.combinatoria_y_probabilidad import combinacion
 
 
 def render():

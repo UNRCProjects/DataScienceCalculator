@@ -17,7 +17,6 @@ Fecha: 2025
 
 import math
 from scipy.stats import binom
-import numpy as np
 
 
 def factorial(n):
