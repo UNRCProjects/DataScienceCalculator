@@ -7,5 +7,6 @@ def render():
     """)
     st.markdown("""
     **Autores (Por orden alfabético):**
-    - [Miguel Evangelista](https://github.com/mevangelista-alvarado)
+     - [Gloria Estela Urania Ruíz Sánchez](https://github.com/GloriaEURS)
+     - [Miguel Evangelista](https://github.com/mevangelista-alvarado)
     """)
