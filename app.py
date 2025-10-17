@@ -1,5 +1,5 @@
 import streamlit as st
-from frontend.aritmetica import mcd_view, mcm_view, primos_view, coprimos_view
+from frontend.aritmetica import mcd_view, mcm_view, primos_view, coprimos_view, integrales_view
 from frontend import home_view
 from frontend import autores_view
 
@@ -41,6 +41,9 @@ with st.sidebar.expander("🧮 Aritmética"):
     if st.button("Números coprimos", key="coprimos_btn"):
         st.session_state['categoria'] = "Aritmética"
         st.session_state['subopcion'] = "Coprimos"
+    if st.button("Resolver Integrales", key="integrales_btn"):
+        st.session_state['categoria'] = "Aritmética"
+        st.session_state['subopcion'] = "Integrales"
 
 # Ruteo según selección
 categoria = st.session_state['categoria']
@@ -56,6 +59,8 @@ elif categoria == "Aritmética" and subopcion == "Primos":
     primos_view.render()
 elif categoria == "Aritmética" and subopcion == "Coprimos":
     coprimos_view.render()
+elif categoria == "Aritmética" and subopcion == "Integrales":
+    integrales_view.render()
 elif categoria == "Autores":
     autores_view.render()
 

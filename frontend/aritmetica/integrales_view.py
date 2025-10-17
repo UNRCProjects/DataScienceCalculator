@@ -2,11 +2,10 @@ import streamlit as st
 from backend.integrales import resolver_integral
 
 def render():
-    st.header("🧮 Calculadora de Integrales")
+    st.header("∫ Calculadora de Integrales")
     st.markdown("""
-    **Instrucciones:** Ingresa una función y la variable respecto a la cual deseas integrar.
-    - Usa la sintaxis de Python (`**` para potencias, `sin(x)` para seno, `exp(x)` para e^x, etc.).
-    - Ejemplo: `x**2 + 3*x + sin(x)`
+    **Instrucciones:** Ingresa una función y la variable respecto a la cual deseas integrar.  
+      Ejemplo: `x**2 + 3*x + sin(x)`
     """)
 
     expr = st.text_input("Función a integrar:", value="x**2 + 3*x")
