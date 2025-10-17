@@ -2,6 +2,7 @@ import streamlit as st
 from frontend.aritmetica import mcd_view, mcm_view, primos_view, coprimos_view
 from frontend import home_view
 from frontend import autores_view
+from frontend.calculo_diferencial import derivadas_view
 
 # Configuración inicial de la app
 st.set_page_config(
@@ -15,6 +16,8 @@ if 'categoria' not in st.session_state:
     st.session_state['categoria'] = 'Home'
 if 'subopcion' not in st.session_state:
     st.session_state['subopcion'] = 'Principal'
+if 'calculo_diferencial_opcion' not in st.session_state:
+     st.session_state['calculo_diferencial_opcion'] = 'Derivadas'
 
 # ====== BARRA LATERAL ======
 # st.sidebar.title("📂 Navegación")
@@ -42,9 +45,16 @@ with st.sidebar.expander("🧮 Aritmética"):
         st.session_state['categoria'] = "Aritmética"
         st.session_state['subopcion'] = "Coprimos"
 
+# Nueva sección para Cálculo Diferencial
+with st.sidebar.expander("📈 Cálculo Diferencial"):
+    if st.button("Derivadas", key="derivadas_btn"):
+        st.session_state['categoria'] = "Cálculo Diferencial"
+        st.session_state['calculo_diferencial_opcion'] = "Derivadas"
+
 # Ruteo según selección
 categoria = st.session_state['categoria']
 subopcion = st.session_state['subopcion']
+calculo_diferencial_opcion = st.session_state.get('calculo_diferencial_opcion', 'Derivadas')
 
 if categoria == "Home":
     home_view.render()
@@ -56,6 +66,8 @@ elif categoria == "Aritmética" and subopcion == "Primos":
     primos_view.render()
 elif categoria == "Aritmética" and subopcion == "Coprimos":
     coprimos_view.render()
+elif categoria == "Cálculo Diferencial" and calculo_diferencial_opcion == "Derivadas":
+     derivadas_view.render()
 elif categoria == "Autores":
     autores_view.render()
 
