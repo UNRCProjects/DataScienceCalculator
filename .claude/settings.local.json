@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat \"c:\\Users\\gfdc\\Documentos\\2025-2\\DataScienceCalculator\\backend\\visualizador.py\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
