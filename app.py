@@ -2,6 +2,7 @@ import streamlit as st
 from frontend.aritmetica import mcd_view, mcm_view, primos_view, coprimos_view
 from frontend import home_view
 from frontend import autores_view
+from frontend.etl import etl_view_extended
 
 # Configuración inicial de la app
 st.set_page_config(
@@ -42,6 +43,11 @@ with st.sidebar.expander("🧮 Aritmética"):
         st.session_state['categoria'] = "Aritmética"
         st.session_state['subopcion'] = "Coprimos"
 
+with st.sidebar.expander("📊 ETL"):
+    if st.button("Procesar CSV", key="etl_btn"):
+        st.session_state['categoria'] = "ETL"
+        st.session_state['subopcion'] = "Procesar CSV"
+
 # Ruteo según selección
 categoria = st.session_state['categoria']
 subopcion = st.session_state['subopcion']
@@ -58,6 +64,8 @@ elif categoria == "Aritmética" and subopcion == "Coprimos":
     coprimos_view.render()
 elif categoria == "Autores":
     autores_view.render()
+elif categoria == "ETL":
+    etl_view_extended.render()
 
 # Footer
 st.markdown(
