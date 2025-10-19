@@ -8,4 +8,5 @@ def render():
     st.markdown("""
     **Autores (Por orden alfabético):**
     - [Miguel Evangelista](https://github.com/mevangelista-alvarado)
+    - [Raul Campero](https://github.com/Raul-Campero)
     """)
