@@ -1,5 +1,5 @@
 import streamlit as st
-from frontend.aritmetica import suma_view, division_view, aritmetica_view, mcd_view, mcm_view, primos_view, coprimos_view
+from frontend.aritmetica import division_view, aritmetica_view, mcd_view, mcm_view, primos_view, coprimos_view
 from frontend.etl_view import render as etl_render
 
 from frontend import home_view
