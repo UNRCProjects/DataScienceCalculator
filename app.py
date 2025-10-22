@@ -1,5 +1,5 @@
 import streamlit as st
-from frontend.aritmetica import division_view, aritmetica_view, mcd_view, mcm_view, primos_view, coprimos_view
+from frontend.aritmetica import aritmetica_view mcd_view, mcm_view, primos_view, coprimos_view
 from frontend.etl_view import render as etl_render
 
 from frontend import home_view
@@ -34,8 +34,6 @@ with st.sidebar.expander("🏠 Home", expanded=False):
 
 with st.sidebar.expander("🧮 Aritmética", expanded=False):
     if st.button("Suma", key="suma_btn"):
-
-
         st.session_state['categoria'] = "Aritmética"
         st.session_state['subopcion'] = "MCD"
     if st.button("Mínimo Común Multiplo (MCM)", key="mcm_btn"):
