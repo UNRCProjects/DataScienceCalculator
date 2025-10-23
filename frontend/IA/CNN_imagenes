@@ -1,4 +1,4 @@
-#importar librerías necesarias
+#importar librerías 
 import tensorflow as tf
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.datasets import mnist
