@@ -1,5 +1,4 @@
 import heapq
-from collections import defaultdict
 
 def dijkstra(graph, start, end):
     """
