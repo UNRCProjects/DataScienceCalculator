@@ -2,11 +2,6 @@ import streamlit as st
 import pandas as pd
 from backend.grafos.dijkstra import dijkstra, add_connection, remove_connection, get_all_nodes
 
-import streamlit as st
-import pandas as pd
-from backend.grafos.dijkstra import dijkstra, add_connection, get_all_nodes
-
-
 def render():
     # Configuración de la página
     st.set_page_config(
