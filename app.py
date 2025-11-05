@@ -2,6 +2,7 @@ import streamlit as st
 from frontend.aritmetica import mcd_view, mcm_view, primos_view, coprimos_view
 from frontend import home_view
 from frontend import autores_view
+from frontend import sha256_view
 
 # Configuración inicial de la app
 st.set_page_config(
@@ -42,6 +43,11 @@ with st.sidebar.expander("🧮 Aritmética"):
         st.session_state['categoria'] = "Aritmética"
         st.session_state['subopcion'] = "Coprimos"
 
+with st.sidebar.expander("🔒 Criptografía"):
+    if st.button("Hashing SHA-256", key="sha256_btn"):
+        st.session_state['categoria'] = "Criptografía"
+        st.session_state['subopcion'] = "SHA-256"
+
 # Ruteo según selección
 categoria = st.session_state['categoria']
 subopcion = st.session_state['subopcion']
@@ -58,6 +64,8 @@ elif categoria == "Aritmética" and subopcion == "Coprimos":
     coprimos_view.render()
 elif categoria == "Autores":
     autores_view.render()
+elif categoria == "Criptografía" and subopcion == "SHA-256":
+    sha256_view.render()
 
 # Footer
 st.markdown(
