@@ -14,5 +14,5 @@ def render():
             st.warning("Por favor, introduce un texto para procesar.")
         else:
             hashed_text = sha256.hash_text(text_to_hash)
-            st.success(f"El hash SHA-256 del texto es:")
+            st.success("El hash SHA-256 del texto es:")
             st.code(hashed_text, language="")
