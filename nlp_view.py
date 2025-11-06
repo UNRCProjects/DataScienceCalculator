@@ -1,9 +1,26 @@
-import streimport streamlit as st
+import streamlit as st
 import pandas as pd
 from collections import Counter
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+import nltk
+
+import nltk
+
+# Descargar recursos si no existen
+nltk.download('punkt')
+nltk.download('punkt_tab') 
+nltk.download('stopwords')
+
+
+import nltk
+
+# Descargar recursos si no existen
+nltk.download('punkt')
+nltk.download('stopwords')
+
+
 
 # Nota: Asegúrate que NLTK y los recursos 'stopwords' y 'punkt' estén instalados para todo el equipo.
 # (Pip install nltk, y luego nltk.download('stopwords') y nltk.download('punkt') si es necesario).
@@ -75,7 +92,7 @@ class NLPView:
                 st.write("---")
 
                 # Visualización 2: Top 10 de Palabras más Frecuentes
-                st.markdown("#### 🔝 Top 10 de Palabras más Frecuentes (Sin Stopwords)")
+                st.markdown("#### 🔝 Top 10 de Palabras más Frecuentes")
                 
                 df_frecuencias = pd.DataFrame(top_10, columns=['Palabra', 'Frecuencia'])
                 
