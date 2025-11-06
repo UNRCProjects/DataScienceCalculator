@@ -2,6 +2,8 @@ import streamlit as st
 from frontend.aritmetica import mcd_view, mcm_view, primos_view, coprimos_view
 from frontend import home_view
 from frontend import autores_view
+# 📢 AÑADIDO: Importación de la vista de NLP
+from nlp_view import nlp_view
 
 # Configuración inicial de la app
 st.set_page_config(
@@ -42,6 +44,13 @@ with st.sidebar.expander("🧮 Aritmética"):
         st.session_state['categoria'] = "Aritmética"
         st.session_state['subopcion'] = "Coprimos"
 
+# 📢 AÑADIDO: Expansión para el Módulo de Analítica y NLP
+with st.sidebar.expander("🤖 Módulos de Analítica"):
+    if st.button("Análisis de Texto (NLP)", key="btn_nlp"):
+        st.session_state["categoria"] = "Analitica"
+        st.session_state["subopcion"] = "NLP"
+
+
 # Ruteo según selección
 categoria = st.session_state['categoria']
 subopcion = st.session_state['subopcion']
@@ -56,6 +65,9 @@ elif categoria == "Aritmética" and subopcion == "Primos":
     primos_view.render()
 elif categoria == "Aritmética" and subopcion == "Coprimos":
     coprimos_view.render()
+# 📢 AÑADIDO: Ruteo para la nueva vista de NLP
+elif categoria == "Analitica" and subopcion == "NLP":
+    nlp_view.render()
 elif categoria == "Autores":
     autores_view.render()
 
