@@ -42,7 +42,10 @@ with st.sidebar.expander("🧮 Aritmética"):
         st.session_state['categoria'] = "Aritmética"
         st.session_state['subopcion'] = "Coprimos"
 
-# Ruteo según selección
+with st.sidebar.expander("🤖 Machine Learning"):
+    if st.button("Algoritmos de aprendizaje automatico", key="ml_btn"):
+        st.session_state['categoria'] = "Machine Learning"
+        st.session_state['subopcion'] = "Algorimos de aprendizaje automático"
 categoria = st.session_state['categoria']
 subopcion = st.session_state['subopcion']
 
@@ -58,7 +61,10 @@ elif categoria == "Aritmética" and subopcion == "Coprimos":
     coprimos_view.render()
 elif categoria == "Autores":
     autores_view.render()
-
+elif categoria == "Machine Learning":
+    # renderiza la vista creada en frontend/machine_learning_view.py
+    from frontend import machine_learning_view
+    machine_learning_view.render()
 # Footer
 st.markdown(
     '''<hr style="margin-top:40px; margin-bottom:10px;">\

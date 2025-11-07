@@ -1,6 +1,20 @@
 import streamlit as st
 
 def render():
+    # Estilos personalizados para fondo y fuente
+    st.markdown(
+        """
+        <style>
+        body {
+            background-color: #e3f2fd;
+        }
+        .stApp {
+            font-size: 22px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
     # Imagen superior
     st.image("assets/cintillo.png", use_container_width=True)
     # Título principal
@@ -27,7 +41,8 @@ def render():
     st.markdown("""
     - 🧮 Áritmetica  
     """)
-    
+    st.markdown("""
+    - 🤖 machine_learning""")
     # Nota final
     st.info("""
         Selecciona un módulo en el menú lateral para comenzar.

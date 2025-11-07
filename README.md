@@ -65,6 +65,15 @@ DataScienceCalculator/
    ```
 5a. Abrir en el navegador `http://localhost:8501`
 
+## Despliegue en Streamlit Cloud
+
+1. Asegúrate de que tu repositorio está en GitHub y contiene `requirements.txt` y `app.py` en la raíz.
+2. Ve a https://share.streamlit.io y conecta tu cuenta de GitHub.
+3. Crea una nueva aplicación seleccionando el repositorio y el branch `main`, y configura el archivo de entrada como `app.py`.
+4. Streamlit Cloud instalará las dependencias y desplegará la app automáticamente. Si hay errores revisa los logs en la interfaz de Streamlit Cloud.
+
+Alternativamente puedes desplegar en servicios como Heroku, Railway o Render siguiendo sus guías para aplicaciones Python basadas en web.
+
 <!--
 ### Ejecutar API
 4b. Ejecuta el archivo principal
