@@ -19,10 +19,6 @@ PAGES = {
         "Principal": home_view.render,
         "Autores": autores_view.render,
     },
-    "Aritmética": {
-        "Suma": suma_view.render,
-        "División": division_view.render,
-    },
     "Visualización": {
         "Gráfico de Dispersión": scatter_view.render,
     }
