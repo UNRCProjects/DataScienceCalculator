@@ -1,1 +1,7 @@
 streamlit
+fastapi
+uvicorn
+pandas
+matplotlib
+seaborn
+numpy
