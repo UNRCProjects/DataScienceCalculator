@@ -1,7 +1,7 @@
 import streamlit as st
 from frontend.aritmetica import mcd_view, mcm_view, primos_view, coprimos_view
 from frontend import home_view, autores_view
-from frontend.criptografica import rsa_view, sha256_view, caesar_view, hill_view
+from frontend.criptografia import sha256_view, caesar_view, hill_view
 
 
 # Configuración inicial de la app
@@ -42,14 +42,8 @@ with st.sidebar.expander("🧮 Aritmética"):
     if st.button("Números coprimos", key="coprimos_btn"):
         st.session_state['categoria'] = "Aritmética"
         st.session_state['subopcion'] = "Coprimos"
-    if st.button("Derivadas", key="derivadas_btn"):
-        st.session_state['categoria'] = "Aritmética"
-        st.session_state['subopcion'] = "Derivadas"
 
 with st.sidebar.expander("🔐 Cifrado"):
-    if st.button("Cifrado RSA", key="rsa_btn"):
-        st.session_state['categoria'] = "Cifrado"
-        st.session_state['subopcion'] = "RSA"
     if st.button("Cifrado SHA256", key="sha256_btn"):
         st.session_state['categoria'] = "Cifrado"
         st.session_state['subopcion'] = "SHA256"
@@ -74,12 +68,8 @@ elif categoria == "Aritmética" and subopcion == "Primos":
     primos_view.render()
 elif categoria == "Aritmética" and subopcion == "Coprimos":
     coprimos_view.render()
-elif categoria == "Aritmética" and subopcion == "Derivadas":
-    derivadas.render()
 elif categoria == "Autores":
     autores_view.render()
-elif categoria == "Cifrado" and subopcion == "RSA":
-    rsa_view.render()
 elif categoria == "Cifrado" and subopcion == "SHA256":
     sha256_view.render()
 elif categoria == "Cifrado" and subopcion == "César":

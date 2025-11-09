@@ -4,50 +4,6 @@ import hashlib
 import numpy as np
 from typing import Tuple, List
 
-def generate_rsa_keys(p: int, q: int) -> Tuple[Tuple[int, int], Tuple[int, int]]:
-    """
-    Generate public and private RSA keys
-    Args:
-        p (int): First prime number
-        q (int): Second prime number
-    Returns:
-        Tuple containing public key (e, n) and private key (d, n)
-    """
-    n = p * q
-    phi = (p - 1) * (q - 1)
-    
-    # Choose e: coprime to phi
-    e = 65537  # Common choice for e
-    
-    # Calculate d: modular multiplicative inverse of e modulo phi
-    d = pow(e, -1, phi)
-    
-    return ((e, n), (d, n))
-
-def rsa_encrypt(message: str, public_key: Tuple[int, int]) -> List[int]:
-    """
-    Encrypt a message using RSA
-    Args:
-        message (str): Message to encrypt
-        public_key (tuple): Public key (e, n)
-    Returns:
-        List of encrypted values
-    """
-    e, n = public_key
-    return [pow(ord(char), e, n) for char in message]
-
-def rsa_decrypt(encrypted_msg: List[int], private_key: Tuple[int, int]) -> str:
-    """
-    Decrypt an RSA encrypted message
-    Args:
-        encrypted_msg (list): List of encrypted values
-        private_key (tuple): Private key (d, n)
-    Returns:
-        Decrypted message
-    """
-    d, n = private_key
-    return ''.join([chr(pow(char, d, n)) for char in encrypted_msg])
-
 def sha256_hash(message: str) -> str:
     """
     Generate SHA256 hash of a message
