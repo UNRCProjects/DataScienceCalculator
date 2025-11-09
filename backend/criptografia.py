@@ -1,6 +1,6 @@
 import hashlib
 import numpy as np
-from typing import List
+
 
 def sha256_hash(message: str) -> str:
     """
