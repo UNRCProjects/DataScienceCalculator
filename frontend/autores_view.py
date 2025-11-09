@@ -10,4 +10,5 @@ def render():
             
     - [José Adán Quintero Sánchez](https://github.com/adanqz)
     - [Miguel Evangelista](https://github.com/mevangelista-alvarado)
+    - [Manuel Nápoles](https://github.com/manuelnapolesromero)
     """)
