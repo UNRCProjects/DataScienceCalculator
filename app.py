@@ -4,6 +4,7 @@ from frontend.aritmetica import mcd_view, mcm_view, primos_view, coprimos_view
 from frontend.criptografia import sha256_view, caesar_view, hill_view
 from frontend.calculo_diferencial import derivadas_view
 
+
 # Configuración inicial de la app
 st.set_page_config(
     page_title="Calculadora Colaborativa",
