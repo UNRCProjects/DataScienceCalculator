@@ -24,14 +24,14 @@ if 'calculo_diferencial_opcion' not in st.session_state:
 st.sidebar.image("assets/logo_unrc.png")
 
 # Sidebar con categorías y subopciones tipo dropdown
-with st.sidebar.expander("🏠 Home", expanded=False):
+with st.sidebar.expander("Home", expanded=False):
     if st.button("Ir a Home", key="home_btn"):
         st.session_state['categoria'] = "Home"
         st.session_state['subopcion'] = "Principal"
     if st.button("Autores", key="autores_btn"):
         st.session_state['categoria'] = "Autores"
 
-with st.sidebar.expander("🧮 Aritmética"):
+with st.sidebar.expander("Aritmética"):
     if st.button("Máximo Común Divisor (MCD)", key="mcd_btn"):
         st.session_state['categoria'] = "Aritmética"
         st.session_state['subopcion'] = "MCD"
@@ -45,12 +45,12 @@ with st.sidebar.expander("🧮 Aritmética"):
         st.session_state['categoria'] = "Aritmética"
         st.session_state['subopcion'] = "Coprimos"
 
-with st.sidebar.expander("📈 Cálculo Diferencial"):
+with st.sidebar.expander("Cálculo Diferencial"):
     if st.button("Derivadas", key="derivadas_btn"):
         st.session_state['categoria'] = "Cálculo Diferencial"
         st.session_state['calculo_diferencial_opcion'] = "Derivadas"
 
-with st.sidebar.expander("🔐 Cifrado"):
+with st.sidebar.expander("Cifrado"):
     if st.button("Cifrado SHA256", key="sha256_btn"):
         st.session_state['categoria'] = "Cifrado"
         st.session_state['subopcion'] = "SHA256"
