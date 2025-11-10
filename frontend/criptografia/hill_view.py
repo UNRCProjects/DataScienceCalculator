@@ -3,7 +3,7 @@ import numpy as np
 from backend.criptografia import hill_encrypt, hill_decrypt
 
 def render():
-    st.title("🔢 Cifrado Hill")
+    st.title("Cifrado Hill")
     
     st.markdown("""
     ### Descripción

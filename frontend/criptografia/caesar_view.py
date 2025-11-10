@@ -2,7 +2,7 @@ import streamlit as st
 from backend.criptografia import caesar_encrypt, caesar_decrypt
 
 def render():
-    st.title("📜 Cifrado Caesar")
+    st.title("Cifrado Caesar")
     
     st.markdown("""
     ### Descripción
