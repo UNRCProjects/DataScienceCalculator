@@ -91,6 +91,6 @@ elif categoria == "Cifrado" and subopcion == "Hill":
 st.markdown(
     '''<hr style="margin-top:40px; margin-bottom:10px;">\
     <div style="text-align:center; color: #888; font-size: 0.95em;">
-        Universidad Nacional Rosario Castellanos &copy; 2025<br>
+        Universidad Nacional Rosario Castellanos (UNRC) &copy; 2025<br>
         Proyecto Calculadora de Ciencia de Datos
     </div>''', unsafe_allow_html=True)
