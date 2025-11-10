@@ -9,7 +9,7 @@ def render():
     """)
     
     # Subtítulo
-    st.subheader("Bienvenido 👋")
+    st.subheader("Bienvenido!")
 
     # Descripción general
     st.write("""
@@ -24,13 +24,6 @@ def render():
     st.markdown("""
         ### Módulos disponibles
     """)
-    st.markdown("""
-    - 🧮 Áritmetica  
-    """)
-    st.markdown("""
-    - 🔐 Criptografía  
-    """)
-    # Nota final
-    st.info("""
-        Selecciona un módulo en el menú lateral para comenzar.
-    """)
+    st.markdown("""- Áritmetica""")
+    st.markdown("""- Criptografía""")
+    st.markdown("""- Cálculo Diferencial""")
