@@ -8,7 +8,7 @@ def render():
     """)
     st.markdown("""
     **Autores (Por orden alfabético):**
-    - [Sofia Casas](https://github.com/Karla-cm)        
+    - [Karla Sofia Casas Morales](https://github.com/Karla-cm)        
     - [José Adán Quintero Sánchez](https://github.com/adanqz)
-    - [Manuel Nápoles](https://github.com/manuelnapolesromero)
+    - [Manuel Nápoles Romero](https://github.com/manuelnapolesromero)
     """)
