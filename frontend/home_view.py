@@ -2,14 +2,14 @@ import streamlit as st
 
 def render():
     # Imagen superior
-    st.image("assets/cintillo.png", use_container_width=True)
+    st.image("assets/cintillo.png", width="stretch")
     # Título principal
     st.title("""
         Calculadora de Ciencia de Datos
     """)
     
     # Subtítulo
-    st.subheader("Bienvenido 👋")
+    st.subheader("Bienvenido!")
 
     # Descripción general
     st.write("""
@@ -24,11 +24,6 @@ def render():
     st.markdown("""
         ### Módulos disponibles
     """)
-    st.markdown("""
-    - 🧮 Áritmetica  
-    """)
-    
-    # Nota final
-    st.info("""
-        Selecciona un módulo en el menú lateral para comenzar.
-    """)
+    st.markdown("""- Áritmetica""")
+    st.markdown("""- Criptografía""")
+    st.markdown("""- Cálculo Diferencial""")
