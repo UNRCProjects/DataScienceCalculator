@@ -1,9 +1,7 @@
 import streamlit as st
-from frontend import home_view, autores_view
-from frontend.aritmetica import mcd_view, mcm_view, primos_view, coprimos_view
-from frontend.criptografia import sha256_view, caesar_view, hill_view
-from frontend.calculo_diferencial import derivadas_view
-
+from frontend.aritmetica import mcd_view, mcm_view, primos_view, coprimos_view, integrales_view
+from frontend import home_view
+from frontend import autores_view
 
 # Configuración inicial de la app
 st.set_page_config(
@@ -45,6 +43,9 @@ with st.sidebar.expander("Aritmética"):
     if st.button("Números coprimos", key="coprimos_btn"):
         st.session_state['categoria'] = "Aritmética"
         st.session_state['subopcion'] = "Coprimos"
+    if st.button("Resolver Integrales", key="integrales_btn"):
+        st.session_state['categoria'] = "Aritmética"
+        st.session_state['subopcion'] = "Integrales"
 
 with st.sidebar.expander("Cálculo Diferencial"):
     if st.button("Derivadas", key="derivadas_btn"):
@@ -77,8 +78,8 @@ elif categoria == "Aritmética" and subopcion == "Primos":
     primos_view.render()
 elif categoria == "Aritmética" and subopcion == "Coprimos":
     coprimos_view.render()
-elif categoria == "Cálculo Diferencial" and calculo_diferencial_opcion == "Derivadas":
-     derivadas_view.render()
+elif categoria == "Aritmética" and subopcion == "Integrales":
+    integrales_view.render()
 elif categoria == "Autores":
     autores_view.render()
 elif categoria == "Cifrado" and subopcion == "SHA256":
