@@ -11,4 +11,5 @@ def render():
     - [Karla Sofia Casas Morales](https://github.com/Karla-cm)        
     - [José Adán Quintero Sánchez](https://github.com/adanqz)
     - [Manuel Nápoles Romero](https://github.com/manuelnapolesromero)
+    - [José Rogelio Hidalgo Cirigo] (https://github.com/rogeliohc21)
     """)
